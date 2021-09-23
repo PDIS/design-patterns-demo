@@ -19,7 +19,7 @@ import {
   DropdownMenu,
   DropdownButton
 } from '@primer/components'
-import { CheckIcon } from '@primer/octicons-react'
+/* import { CheckIcon } from '@primer/octicons-react' */
 import deepmerge from 'deepmerge'
 import './fonts.css'
 
@@ -33,17 +33,14 @@ function HealthCard() {
   const [steps, setSteps] = useState(1)
   const [finished, setFinished] = useState([])
   const [validation, setValidation] = useState('phone')
-  const [idValidation, SetIDValidation] = useState(true)
+  /*   const [idValidation, SetIDValidation] = useState(true)
   const [phoneValidation, setPhoneValidation] = useState(true)
   const [pinValidation, setPinValidation] = useState(true)
-  const [accountValidation, setAccountValidation] = useState(true)
+  const [accountValidation, setAccountValidation] = useState(true) */
   const [passwordValidation, setPasswordValidation] = useState(true)
   const [rePasswordValidation, setRePasswordValidation] = useState(true)
   const [mobileValidation, setMobileValidation] = useState(true)
   const [mailValidation, setMailValidation] = useState(true)
-  const [defaultID, setDefaultID] = useState('')
-  const [defaultPhone, setDefaultPhone] = useState('')
-  const [defaultPin, setDefaultPin] = useState('')
   const [component, setComponent] = useState('未檢測')
   const [reader, setReader] = useState('未檢測')
   const [healthCard, setHealthCard] = useState('未檢測')
@@ -52,15 +49,9 @@ function HealthCard() {
   const [town, setTown] = useState('')
   const [village, setVillage] = useState('')
 
-  const id = useRef('')
   const phone = useRef('')
   const mobile = useRef('')
-  const pin = useRef('')
-  const account = useRef('')
-  const name = useRef('')
-  const gender = useRef('')
   const mail = useRef('')
-  const contact = useRef('')
   const password = useRef('')
   const repassword = useRef('')
   const householdNo = useRef('')
@@ -354,7 +345,7 @@ function HealthCard() {
   }
 
   const Step3 = () => {
-    const Verify = () => {
+    /* const Verify = () => {
       if (validation === 'phone') {
         setDefaultPhone(phone.current.value)
         setDefaultID(id.current.value)
@@ -374,7 +365,7 @@ function HealthCard() {
           ? setPinValidation(false)
           : setPinValidation(true)
       }
-    }
+    } */
 
     const DetectHealthCard = () => {
       setHealthCard('成功')
