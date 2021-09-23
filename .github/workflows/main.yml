@@ -18,8 +18,6 @@ jobs:
         run: |
           yarn
           yarn build
-        env:
-          CI: true
 
   build-and-deploy:
     runs-on: ubuntu-latest
