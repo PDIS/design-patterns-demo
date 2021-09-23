@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  install-and-test:
+  install-and-build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -14,9 +14,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Install
+      - name: Install and Build
         run: |
           yarn
+          yarn build
         env:
           CI: true
 
@@ -32,4 +33,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: build
-          BUILD_SCRIPT: cp .env.example .env.local && yarn && yarn build
