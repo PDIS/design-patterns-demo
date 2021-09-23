@@ -17,7 +17,7 @@ jobs:
       - name: Install and Build
         run: |
           yarn
-          yarn build
+          CI=false yarn build
 
   build-and-deploy:
     runs-on: ubuntu-latest
